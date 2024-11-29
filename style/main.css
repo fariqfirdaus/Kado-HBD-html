@@ -1,0 +1,42 @@
+.baloons {
+    width: 100%; /* Sesuaikan dengan layar */
+    height: 300px; /* Atau gunakan `vh` jika perlu */
+    position: relative;
+    overflow: hidden;
+}
+
+@media (max-width: 768px) {
+    .baloons img {
+        width: 40px; /* Perkecil ukuran balon untuk layar kecil */
+    }
+
+    .baloons img:nth-child(1) { left: 10%; animation-delay: 0s; }
+    .baloons img:nth-child(2) { left: 20%; animation-delay: 2s; }
+    .baloons img:nth-child(3) { left: 30%; animation-delay: 4s; }
+    .baloons img:nth-child(4) { left: 40%; animation-delay: 1s; }
+    .baloons img:nth-child(5) { left: 50%; animation-delay: 3s; }
+    .baloons img:nth-child(6) { left: 60%; animation-delay: 5s; }
+    .baloons img:nth-child(7) { left: 70%; animation-delay: 0s; }
+    .baloons img:nth-child(8) { left: 80%; animation-delay: 2s; }
+    .baloons img:nth-child(9) { left: 90%; animation-delay: 4s; }
+    .baloons img:nth-child(10) { left: 95%; animation-delay: 6s; }
+
+}
+
+@keyframes float {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-600px); }
+}
+
+.baloons img {
+    animation: float 7s ease-in infinite; /* Durasi lebih lama */
+}
+
+
+#specialPhoto {
+    display: block;
+    margin: 20px auto;
+    max-width: 80%;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
